@@ -137,20 +137,20 @@ EntreesImages = [
 ]
 
 AppetizersDivs = [
-  '<div class="item"><p>Mozzzerla Sticks with onion rings<span class="price">$14</span><br /><small>Fried hard in breadcrums and flour. </small></p></div>',
- '<div class="item"><p>Southern Fried Chicken<span class="price">$14</span><br /><small>Fried hard in breadcrums and flour. </small></p></div>',
- '<div class="item"><p>BBQ Wings<span class="price">$14</span><br /><small>Fried hard in breadcrums and flour then tossed in homemade BBQ sauce. </small></p></div>',
+  '<div class="item"onclick=this.classList.toggle("show-description")><p>Mozzzerla Sticks with onion rings<span class="price">$14</span><br /><small>Fried hard in breadcrums and flour. </small></p></div>',
+ '<div class="item"onclick=this.classList.toggle("show-description")><p>Southern Fried Chicken<span class="price">$14</span><br /><small>Fried hard in breadcrums and flour. </small></p></div>',
+ '<div class="item"onclick=this.classList.toggle("show-description")><p>BBQ Wings<span class="price">$14</span><br /><small>Fried hard in breadcrums and flour then tossed in homemade BBQ sauce. </small></p></div>',
 ]
 DessertsDivs = [
-  '<div class="item"><p>Brownie drizzled with Chocolate syrup<span class="price">$14</span><br /><small>Baked freshly with ghardelli chocolate. </small></p></div>',
- '<div class="item"><p>Choclate french dusse with vanilla bean ice cream<span class="price">$16</span><br /><small>homemade spun icecream serve with warm syrup. </small></p></div>',
- '<div class="item"><p>Fried Cinnamon churros<span class="price">$12</span><br /><small>Fried in cinnamon batter then tossed in cinnamon. </small></p></div>',
+  '<div class="item"onclick=this.classList.toggle("show-description")><p>Brownie drizzled with Chocolate syrup<span class="price">$14</span><br /><small>Baked freshly with ghardelli chocolate. </small></p></div>',
+ '<div class="item"onclick=this.classList.toggle("show-description")><p>Choclate french dusse with vanilla bean ice cream<span class="price">$16</span><br /><small>homemade spun icecream serve with warm syrup. </small></p></div>',
+ '<div class="item"onclick=this.classList.toggle("show-description")><p>Fried Cinnamon churros<span class="price">$12</span><br /><small>Fried in cinnamon batter then tossed in cinnamon. </small></p></div>',
 ]
 
 EntreesDivs = [
-  '<div class="item"><p>Stir fry shirmp<span class="price">$16</span><br /><small>Stewed in a teryki sauce. </small></p></div>',
- '<div class="item"><p>Pasta with Curry shrimp<span class="price">$18</span><br /><small>homemade spun pasta with indian curry. </small></p></div>',
- '<div class="item"><p>Seafood feast<span class="price">$32</span><br /><small>Steamed with butter and garlic seasoning wuth vegtabales. </small></p></div>',
+  '<div class="item"onclick=this.classList.toggle("show-description")><p>Stir fry shirmp<span class="price">$16</span><br /><small>Stewed in a teryki sauce. </small></p></div>',
+ '<div class="item"onclick=this.classList.toggle("show-description")><p>Pasta with Curry shrimp<span class="price">$18</span><br /><small>homemade spun pasta with indian curry. </small></p></div>',
+ '<div class="item"onclick=this.classList.toggle("show-description")><p>Seafood feast<span class="price">$32</span><br /><small>Steamed with butter and garlic seasoning wuth vegtabales. </small></p></div>',
 ]
 
 function Desserts() {
@@ -192,9 +192,7 @@ function Appetizers() {
   }
 }
 
-  $('div').on('click', function() {
-      $(this).toggleClass('show-description');
-  });
+
 </script>
 
 </body>
