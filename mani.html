@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<head>
+<script src="/assets/jquery.js"></script>
+<link href="https://fonts.googleapis.com/css?family=Thasadith" rel="stylesheet">
+<style>
+body {
+  font-family: Thasadith; sans-serif;
+  margin: 0 auto;
+  max-width: 600px;
+  color: blue;
+  background: url("https://ae01.alicdn.com/kf/HTB1eJmKNpXXXXXDaFXXq6xXFXXXH/Custom-3d-mural-3D-dessert-cake-gourmet-theme-restaurant-wallpaper-cake-shop-dessert-coffee-dessert-snack.jpg_640x640.jpg");
+}
+div {
+  height: 300px;
+  background-size: cover;
+  position: relative;
+  margin: 40px 0 0 0;
+  border-radius: 12px;
+}
+h1 {
+  font-family: 'Thasadith', cursive;
+  text-align: center;
+  font-size: 75px;
+
+  margin: 60px 0 0 0;
+}
+h2 {
+  text-align: center;
+  color: red;
+  margin: 0px 0 70px 0;
+}
+p {
+  color: pink;
+  background: black;
+  background: linear-gradient(bottom, rgba(255,255,255,.5), rgba(255,255,255,.5));
+  background: -webkit-linear-gradient(bottom, rgba(255,255,1,1), rgba(1,1,1,.5));
+  background: -moz-linear-gradient(bottom, rgba(255,1,1,1), rgba(1,1,1,.5));
+  padding: 10px;
+  line-height: 28px;
+  text-align: justify;
+  position: absolute;
+  bottom: 0;
+  margin: 0;
+  height: 30px;
+  transition: height .5s;
+  -webkit-transition: height .5s;
+  -moz-transition: height .5s;
+}
+
+small {
+  opacity: 0;
+}
+
+.show-description p {
+  height: 150px;
+}
+
+.show-description small {
+  opacity: 1;
+}
+
+
+.price {
+  float: right;
+}
+
+
+@media (max-width: 500px) {
+  h1 {
+    font-size: 50px;
+    margin-top: 20px;
+    line-height: 40px;
+    color: blue;
+  }
+  h2 {
+    font-size: 20px;
+    margin: 20px 0 30px 0;
+  }
+  div {
+    margin: 20px 12px 0 12px;
+  }
+  p {
+    font-size: 20px;
+    line-height: 24px;
+  }
+  small {
+    font-size: 16px;
+  }
+}
+  ul {
+      padding: 10px;
+      background: rgba(0,0,0,0.5);
+      text-align: center;
+    }
+    li {
+      display: inline;
+      padding: 0px 10px 0px 10px;
+  }
+</style>
+
+</head>
+
+<body>
+
+    <ul>
+      <li><button onclick=Appetizers()>Appetizers</button></li>
+       
+      <li><button onclick=Entrees()>Entrees</button></li>
+      <li><button onclick=Desserts()>Desserts</button></li>
+      
+    </ul>
+
+<h1>Imani Dessert Restaurant</h1>
+<h2>New York City finest</h2>
+
+<div id="cake"></div>
+
+
+<script>
+DessertsImages = [
+  'url("https://panmacmillan.azureedge.net/pmk11/panmacmillan/files/media/panmacmillan/panmacmillan/blogs/bluebird/raw-chocolate-brownie-recipe.png?ext=.png")',
+  'url("https://www.swisschalet.com/images/menu-images/SC_FudgeBrownie_MenuCategory_460x244_v2.png")',
+  'url("https://www.dominos.com.au/media/1116/s00209productimagelargeendefault19000101_112606.png")',
+]
+
+AppetizersImages = [
+  'url("https://pngimage.net/wp-content/uploads/2018/05/appetizer-png-2.png")',
+  'url("http://alfanospizza-restaurant.com/communities/3/000/001/349/203//images/14838122.png")',
+  'url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSf6Md9crc7mu-HGkuwOP7qoSIaUAmc6Z0vDkWA62aYc6QZv6JX")',
+]
+
+EntreesImages = [
+  'url("http://mexicoviejowichita.com/communities/4/000/001/345/254//images/2692556.png")',
+  'url("http://anthonysgourmetcatering.com/wp-content/uploads/2012/07/chicken-2.png")',
+  'url("https://swadtandoorinewlondon.com/public/img/product/thumb/seafood.png")',
+]
+
+AppetizersDivs = [
+  '<div class="item"><p>Mozzzerla Sticks with onion rings<span class="price">$14</span><br /><small>Fried hard in breadcrums and flour. </small></p></div>',
+ '<div class="item"><p>Southern Fried Chicken<span class="price">$14</span><br /><small>Fried hard in breadcrums and flour. </small></p></div>',
+ '<div class="item"><p>BBQ Wings<span class="price">$14</span><br /><small>Fried hard in breadcrums and flour then tossed in homemade BBQ sauce. </small></p></div>',
+]
+DessertsDivs = [
+  '<div class="item"><p>Brownie drizzled with Chocolate syrup<span class="price">$14</span><br /><small>Baked freshly with ghardelli chocolate. </small></p></div>',
+ '<div class="item"><p>Choclate french dusse with vanilla bean ice cream<span class="price">$16</span><br /><small>homemade spun icecream serve with warm syrup. </small></p></div>',
+ '<div class="item"><p>Fried Cinnamon churros<span class="price">$12</span><br /><small>Fried in cinnamon batter then tossed in cinnamon. </small></p></div>',
+]
+
+EntreesDivs = [
+  '<div class="item"><p>Stir fry shirmp<span class="price">$16</span><br /><small>Stewed in a teryki sauce. </small></p></div>',
+ '<div class="item"><p>Pasta with Curry shrimp<span class="price">$18</span><br /><small>homemade spun pasta with indian curry. </small></p></div>',
+ '<div class="item"><p>Seafood feast<span class="price">$32</span><br /><small>Steamed with butter and garlic seasoning wuth vegtabales. </small></p></div>',
+]
+
+function Desserts() {
+  ice = document.getElementById("cake")
+  ice.innerHTML = ''
+  ice.innerHTML += DessertsDivs[0]
+  ice.innerHTML += DessertsDivs[1]
+  ice.innerHTML += DessertsDivs[2]
+  items = document.getElementsByClassName("item")
+  for (i=0; i<3; i=i+1) {
+		items[i].style.background = DessertsImages[i]
+    items[i].style.backgroundSize = '100% 100%'
+  }
+}
+
+function Entrees() { 
+  ice = document.getElementById("cake")
+  ice.innerHTML = ''
+  ice.innerHTML += EntreesDivs[0]
+  ice.innerHTML += EntreesDivs[1]
+  ice.innerHTML += EntreesDivs[2]
+  items = document.getElementsByClassName("item")
+  for (i=0; i<3; i=i+1) {
+		items[i].style.background = EntreesImages[i]
+    items[i].style.backgroundSize = '100% 100%'
+  }
+}
+
+function Appetizers() {
+  ice = document.getElementById("cake")
+  ice.innerHTML = ''
+  ice.innerHTML += AppetizersDivs[0]
+  ice.innerHTML += AppetizersDivs[1]
+  ice.innerHTML += AppetizersDivs[2]
+  items = document.getElementsByClassName("item")
+  for (i=0; i<3; i=i+1) {
+		items[i].style.background = AppetizersImages[i]
+    items[i].style.backgroundSize = '100% 100%'
+  }
+}
+
+  $('div').on('click', function() {
+      $(this).toggleClass('show-description');
+  });
+</script>
+
+</body>
