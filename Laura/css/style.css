@@ -50,7 +50,7 @@ Responsive media queries
 .header {
   background: url('https://uploads.scratch.mit.edu/users/avatars/21916785.png') no-repeat fixed;
   background-size: 100% 100%;
-  min-height: 0px;
+  min-height: 500px;
   position: relative;
 }
 
