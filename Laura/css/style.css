@@ -397,6 +397,9 @@ Responsive media queries
   .title-text {
     margin-bottom: 15px;
   }
+  .header {
+	  background-size: cover;
+	}
 }
 
 @media (min-width: 100px) and (max-width: 550px) {
@@ -425,4 +428,7 @@ Responsive media queries
   .title-text {
     margin-bottom: 15px;
   }
+  .header {
+	  background-size: cover;
+	}
 }
