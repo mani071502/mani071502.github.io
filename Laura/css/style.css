@@ -48,7 +48,7 @@ Responsive media queries
 ***********************************/
 
 .header {
-  background: url('https://uploads.scratch.mit.edu/users/avatars/21916785.png') no-repeat fixed;
+  background: url('https://uploads.scratch.mit.edu/users/avatars/21916785.png') no-repeat;
   background-size: cover;
   min-height: 630px;
   position: relative;
