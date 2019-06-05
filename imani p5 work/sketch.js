@@ -33,7 +33,7 @@ function setup() {
   k=500
   j=600
   level=1
-  time=4
+  time=14
 
   direction = [1,1,1,1]
   score=5
