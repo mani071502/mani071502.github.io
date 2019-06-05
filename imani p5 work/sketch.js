@@ -53,7 +53,7 @@ function draw() {
    fill(310,400,300)
   circle(k,j,54)
  
-
+if (touches.length == 0)   {
   if (keyIsDown(LEFT_ARROW)) {
     a = a - 10
   }
@@ -66,6 +66,12 @@ function draw() {
  if (keyIsDown(DOWN_ARROW)) {
     b = b + 10
   }
+}
+else { 
+		a = touches[0].x
+		 b = touches[0].y
+}
+
   
   
     for (i=0; i<kel; i=i+1) {
